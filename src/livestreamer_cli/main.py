@@ -262,7 +262,7 @@ def read_stream(stream, output, prebuffer, chunk_size=8192):
         iter(partial(stream.read, chunk_size), b"")
     )
     if show_progress:
-        stream_iterator = progress(stream_iterator,
+        stream_iterator = progress(args.s,stream_iterator,
                                    prefix=os.path.basename(args.output))
 
     try:
