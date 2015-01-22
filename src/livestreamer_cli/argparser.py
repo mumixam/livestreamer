@@ -382,7 +382,14 @@ player.add_argument(
     This option will instead let the player decide when to exit.
     """
 )
-
+output.add_argument(
+    "-s",
+    metavar="NNNN",
+    type=num(int, min=0),
+    help="""
+    A number of seconds to run livestreamer.
+    """
+)
 output = parser.add_argument_group("File output options")
 output.add_argument(
     "-o", "--output",
