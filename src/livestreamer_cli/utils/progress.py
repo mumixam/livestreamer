@@ -101,7 +101,7 @@ def progress(howlong,iterator, prefix):
         elapsed = now - start
         if howlong:
             if elapsed > howlong:
-                print('Closing livestream due to -s')
+                print('[download][%s] Closing stream because timelimit reached.')
                 return
         written += len(data)
 
