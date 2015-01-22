@@ -81,7 +81,7 @@ def create_status_line(**params):
     return status
 
 
-def progress(iterator, prefix):
+def progress(howlong,iterator, prefix):
     """Progress an iterator and updates a pretty status line to the terminal.
 
     The status line contains:
@@ -99,6 +99,9 @@ def progress(iterator, prefix):
 
         now = time()
         elapsed = now - start
+        if howlong:
+            if elapsed > howlong:
+                return
         written += len(data)
 
         speed_elapsed = now - speed_updated
