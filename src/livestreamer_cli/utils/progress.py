@@ -101,6 +101,7 @@ def progress(howlong,iterator, prefix):
         elapsed = now - start
         if howlong:
             if elapsed > howlong:
+                print('Closing livestream due to -s')
                 return
         written += len(data)
 
